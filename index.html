@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Découverte des API</title>
+</head>
+<body>
+    <header>
+        <div class="active anime-category category">
+            <h1>ANIME</h1>
+        </div>
+        <div class="manga-category category"> 
+            <h1>MANGA</h1>
+        </div>
+    </header>
+
+    
+    <section id="anime-all">
+        <section class="choice">
+            <h2>Sort By :</h2>
+            <div>
+                <button class="score active" onclick="initAnime('score', 1)">Score</button>
+                <button class="popularity " onclick="initAnime('members', 1)">Popularity</button>
+            </div>
+        </section>
+
+        <section class="choice search-choice">
+            <h2>Search Anime :</h2>
+            <form action="" id="searchForm">
+                <input type="text" name="" id="searchInput" required autocomplete="off" minlength="3" placeholder="Enter Anime name">
+                <input type="submit" value="Search">
+            </form>
+        </section>
+    
+        <section class="choice user-choice">
+            <h2>Search User :</h2>
+            <form action="" id="userForm">    
+                <input type="text" placeholder="Enter a MyAnimeList pseudo" id="user-input" minlength="2" required autocomplete="off">
+                <input type="submit" value="Search">
+            </form>
+        </section>
+
+        <section id="container-top-anime" class="container">
+    
+        </section>
+    
+        <section id="container-data-anime" class="container data">
+    
+        </section>
+    
+        <section id="user-anime">
+            <section id="data-user">
+    
+            </section>
+            <!-- <hr> -->
+            <section class="watch-choice" id="watch-choice">
+                <div class="active" data-choice="watching">Watching</div>
+                <div data-choice="completed">Completed</div>
+                <div data-choice="onhold">On Hold</div>
+                <div data-choice="dropped">Dropped</div>
+                <div data-choice="plantowatch">Plan To Watch</div>
+            </section>
+            <section id="list-user" class="container">
+    
+            </section>
+    
+            <div id="next-page">
+    
+            </div>
+            <div id="previous-page">
+    
+            </div>
+    
+        </section>
+
+        <section id="container-search-result" class="container">
+
+        </section>
+    
+        <div class="button-more">
+    
+        </div>
+    </section>
+
+    <section id="manga-all" class="manga-all">
+        <section class="manga-choice">
+            <h2>Sort By :</h2>
+            <div>
+                <button class="score active" onclick="initManga('-averageRating')">Score</button>
+                <button class="popularity " onclick="initManga('popularityRank')">Popularity</button>
+            </div>
+        </section>
+
+        <section id="container-main-manga" class="container">
+
+        </section>
+
+        <section id="container-data-manga" class="container data">
+    
+        </section>
+
+        <div class="showMore-manga">
+            
+        </div>
+
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
